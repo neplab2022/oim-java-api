@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>user-management-api</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <profiles>
+        <profile>
+            <id>prod</id>
+            <activation>
+                <!-- activate if system properties 'env=prod' -->
+                <property>
+                    <name>env</name>
+                    <value>prod</value>
+                </property>
+            </activation>
+            <properties>
+                <username>usernameValue</username>
+                <password>passwordValue</password>
+                <url>urlValue</url>
+                <auth_path>urlValue</auth_path>
+            </properties>
+        </profile>
+    </profiles>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+    <repositories>
+        <repository>
+            <id>project-common</id>
+            <name>Project Common</name>
+            <url>https://github.com/neplab2022/mvn_repo/raw/main/</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>oimclient</groupId>
+            <artifactId>oimclient</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+</project>
