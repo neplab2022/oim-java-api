@@ -24,6 +24,22 @@
                 <auth_path>urlValue</auth_path>
             </properties>
         </profile>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <!-- activate if system properties 'env=prod' -->
+                <property>
+                    <name>env</name>
+                    <value>dev</value>
+                </property>
+            </activation>
+            <properties>
+                <username>xelsysadm</username>
+                <password>Passw0rd1</password>
+                <url>t3://172.16.30.206:14000</url>
+                <auth_path>D:/Softwares/DesignConsole11G/designconsoleLCCDev/config/authwl.conf</auth_path>
+            </properties>
+        </profile>
     </profiles>
     <build>
         <resources>

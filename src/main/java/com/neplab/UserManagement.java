@@ -11,5 +11,6 @@ public class UserManagement {
         System.out.println(properties.getProperty("oim_pass"));
         System.out.println(properties.getProperty("oim_url"));
         System.out.println(properties.getProperty("authwl_path"));
+        System.out.println(Config.OIM_USERNAME);
     }
 }
