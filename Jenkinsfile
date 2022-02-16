@@ -7,8 +7,11 @@ pipeline {
 
         stage('Build'){
             steps {
+                // for prod env
                 bat "mvn -Dusername=${username} -Dpassword=${password} -Durl=${url} -Dauth_path=${auth_path} clean install -DskipTests"
 
+                // for dev env
+                bat "mvn clean install -DskipTests -P dev"
             }
         }
         stage('Deploy'){
