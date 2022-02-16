@@ -1,6 +1,6 @@
 package com.neplab;
 
-import com.thortech.util.logging.Logger;
+//import com.thortech.util.logging.Logger;
 import oracle.iam.platform.OIMClient;
 
 import javax.security.auth.login.LoginException;
@@ -9,7 +9,7 @@ import java.util.Hashtable;
 import java.util.Properties;
 
 public class Config {
-    public static final Logger logger = Logger.getLogger(Config.class.getName());
+//    public static final Logger logger = Logger.getLogger(Config.class.getName());
     OIMClient oimClient = null;
 
     public static final Properties PROPERTIES = new Properties();
@@ -33,7 +33,7 @@ public class Config {
 
     @SuppressWarnings({"rawtypes", "unchecked"})
     public void getOIMConnection() {
-        logger.info("Started");
+//        logger.info("Started");
         System.out.println("getOIMConnection() : Start");
         // set system properties
         System.setProperty("java.security.auth.login.config", AUTHWL_PATH);
