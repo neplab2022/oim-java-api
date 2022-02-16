@@ -1,0 +1,12 @@
+# Ignore these files
+
+# Package files
+*.jar
+
+# Maven
+target/
+dist/
+
+# JetBrains IDE
+.idea/
+*.iml
